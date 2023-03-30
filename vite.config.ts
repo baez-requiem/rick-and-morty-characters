@@ -5,6 +5,7 @@ import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vite-gh-pages',
   plugins: [react()],
   resolve: {
     alias: [

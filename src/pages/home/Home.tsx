@@ -22,6 +22,7 @@ const Home = () => {
     <Container>
       <Navbar />
       <Hero />
+      { /* @ts-ignore */ }
       <Filters onFilter={onFilter} total={info?.count } />
       {isLoading ? (
         <LoaderContainer>
