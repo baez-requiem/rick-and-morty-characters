@@ -2,7 +2,9 @@ import styled, { css } from "styled-components"
 
 import { ColorsType } from "src/theme/theme"
 
-const IconButton = styled.button<{
+const IconButton = styled.button.attrs({
+  "data-testid": "icon-button"
+})<{
   color?: ColorsType,
   size?: number,
   variant?: 'outlined' | 'default'
@@ -39,7 +41,7 @@ const IconButton = styled.button<{
   
     :hover{
       filter: brightness(.8);
-      box-shadow: 0px 0px 5px 5px ${({ theme, color }) => theme.colors[color || 'gray_800']}20;
+      box-shadow: 0px 0px 5px 5px ${({ theme, color }) =>  color ? theme.colors[color] + 20 : 'transparent'};
     }
   }
 
