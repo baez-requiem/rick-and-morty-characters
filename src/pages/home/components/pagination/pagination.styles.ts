@@ -5,17 +5,17 @@ export const Container = styled.div<{ show: boolean }>`
   bottom: 20px;
   right: 0px;
 
-  padding: 0 20px;
+  padding-right: 20px;
 
   display: ${({ show }) => show ? 'grid' : 'none'};
   grid-template-columns: 1fr 1fr;
-  width: calc(50% + 135px);
+  width: calc(50% + 67.5px);
 `
 
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 
   opacity: .5;
   transition: opacity .3s;
