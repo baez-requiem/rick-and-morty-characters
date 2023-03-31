@@ -439,7 +439,7 @@ Error generating stack: `+o.message+`
     color: ${({theme:e})=>e.colors.sky_500};
   }
   }
-`,Ov=()=>be(aE,{children:[L(Hh,{to:"/",children:"Home"}),"|",L(Hh,{to:"/favorites",children:"Favorites"})]}),sE="/portal.png",lE="/logo.png",uE="/background.jpg",cE=(e=0)=>Af`
+`,Ov=()=>be(aE,{children:[L(Hh,{to:"/",children:"Home"}),"|",L(Hh,{to:"/favorites",children:"Favorites"})]}),sE="./portal.png",lE="./logo.png",uE="./background.jpg",cE=(e=0)=>Af`
   100% { transform: rotate(${360+e}deg); }
 `,fE=re.div`
   position: relative;
