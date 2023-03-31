@@ -4,6 +4,7 @@ import { BtnContent, Container, ImageContent, NameContent } from "./CardCharacte
 import { BsStar, BsStarFill } from 'react-icons/bs'
 
 import { CharacterType } from 'src/api/character/character.types'
+import { useNavigate } from 'react-router-dom'
 
 interface CardCharacterProps {
   data: CharacterType
@@ -13,12 +14,16 @@ interface CardCharacterProps {
 
 const CardCharacter: FC<CardCharacterProps> = ({ data, isFavorite, toggleFavorite }) => {
 
+  const navigate = useNavigate()
+
+  const toCharacterPage = () => navigate('/character/' + data.id)
+
   return (
-    <Container>
-      <ImageContent>
+    <Container >
+      <ImageContent onClick={toCharacterPage}>
         <img src={data.image || ''} alt="teste" />
       </ImageContent>
-      <NameContent>
+      <NameContent onClick={toCharacterPage}>
         {data.name}
       </NameContent>
 

@@ -16,8 +16,9 @@ export default createGlobalStyle`
     overflow-x: hidden;
   }
 
-  html, body, #root {
+  body, #root {
     min-width: 320px;
+    min-height: 100vh;
   }
 
   body {

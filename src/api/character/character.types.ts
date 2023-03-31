@@ -23,7 +23,7 @@ export type CharacterType = {
     url: string
   }
 
-  image: string | null
+  image: string
   episode: string[]
   url: string
   created: string
@@ -44,3 +44,5 @@ export type GetCharacterResponse = {
 }
 
 export type GetManyByIdResponse = CharacterType | CharacterType[]
+
+export type GetByIdResponse = CharacterType

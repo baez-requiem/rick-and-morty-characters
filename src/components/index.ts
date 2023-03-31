@@ -1,5 +1,4 @@
 export { default as CardCharacter } from './cardCharacter/CardCharacter'
-export { default as SearchInput } from './searchInput/SearchInput'
 export { default as IconButton } from './iconButton/IconButton'
 export { default as Button } from './button/Button'
 export { default as Input } from './input/Input'

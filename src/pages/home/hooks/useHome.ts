@@ -19,7 +19,7 @@ const useHome = () => {
     }
 
     return response
-  }, { keepPreviousData: true })
+  }, { keepPreviousData: true, staleTime: 5 * (60 * 1000) })
 
   const onFilter = (values: GetCharacterParams) => setFilters({ ...values, page: 1 })
 

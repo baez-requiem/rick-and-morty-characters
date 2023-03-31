@@ -39,7 +39,8 @@ export const Title = styled.h1`
   font-weight: 500;
 
   @media (${({ theme }) => theme.device.xs}) {
-    font-size: 2.75rem;
+    font-size: 2rem;
+    text-align: center;
   }
 `
 

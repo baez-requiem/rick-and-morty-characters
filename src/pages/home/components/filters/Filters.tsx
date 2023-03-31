@@ -1,9 +1,11 @@
 import { FC } from 'react'
 
-import { SearchInput, IconButton, Input, Button, Select } from "src/components"
+import { IconButton, Input, Button, Select } from "src/components"
 import { FormContent, Container, PopoverContent, Title } from "./filters.styles"
 
 import { MdOutlineTune } from 'react-icons/md'
+import { BiReset } from 'react-icons/bi'
+
 import { genderOpts, initialValues, statusOpts } from "../../home.constants"
 import { useFilters } from "../../hooks/useFilters"
 
@@ -20,9 +22,16 @@ const Filters: FC<FiltersProps> = ({ onFilter, total }) => {
     formik: { 
       values,
       handleChange,
-      handleSubmit
+      handleSubmit,
+      resetForm,
+      submitForm
     }
   } = useFilters({onFilter})
+
+  const reset = () => {
+    resetForm()
+    submitForm()
+  }
 
   return (
     <Container>
@@ -36,6 +45,16 @@ const Filters: FC<FiltersProps> = ({ onFilter, total }) => {
           onClick={() => setShowPopover(!showPopover)}
         >
           <MdOutlineTune size={20} />
+        </IconButton>
+
+        <IconButton
+          size={45}
+          type="button"
+          color="white"
+          variant="outlined"
+          onClick={reset}
+        >
+          <BiReset size={20} />
         </IconButton>
 
         <PopoverContent show={showPopover}>
