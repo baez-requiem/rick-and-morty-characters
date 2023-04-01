@@ -8,7 +8,9 @@ export interface ButtonProps {
   block?: boolean
 }
 
-const Button = styled.button<ButtonProps>`
+const Button = styled.button.attrs({
+  "data-testid": "button"
+})<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
