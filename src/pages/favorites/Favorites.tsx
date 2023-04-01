@@ -1,7 +1,7 @@
 import { BsChevronUp } from "react-icons/bs"
 import { Navbar, CardCharacter, Loader } from "src/components"
 import { useWindowScroll } from "src/hooks"
-import { Container, Content, Title, CharactersContent, LoaderContainer, BtnToUp } from "./favorites.styles"
+import { Container, Content, Title, CharactersContent, LoaderContainer, BtnToUp, NoRegisteredFavorite } from "./favorites.styles"
 import { useFavorites } from "./hooks/useFavorites"
 
 const Favorites = () => {
@@ -19,7 +19,7 @@ const Favorites = () => {
           <LoaderContainer>
             <Loader />
           </LoaderContainer>
-        ) : (
+        ) : characters?.length ? (
           <CharactersContent>
             {characters?.map(character => (
               <CardCharacter
@@ -30,6 +30,10 @@ const Favorites = () => {
               />
             ))}
           </CharactersContent>
+        ) : (
+          <NoRegisteredFavorite>
+            No registered favorite
+          </NoRegisteredFavorite>
         )}
       </Content>
 

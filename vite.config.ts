@@ -8,7 +8,7 @@ import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/vite-gh-pages',
+  base: '/rick-and-morty-characters',
   plugins: [react()],
   test: {
     globals: true,
