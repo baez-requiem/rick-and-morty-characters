@@ -84,3 +84,7 @@ export const BtnToUp = styled.button`
     opacity: .7;
   }
 `
+
+export const NoRegisteredFavorite = styled.div`
+  text-align: center;
+`
